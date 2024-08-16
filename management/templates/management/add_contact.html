@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>add contact</h1>
+    {% include  'message.html' %}
+
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <label for="name">name</label> <br>
+        <input type="text" name="name" placeholder="name"><br>
+
+        <label for="age">age</label><br>
+        <input type="text" name="age" placeholder="age"><br>
+
+        <label for="phone">phone</label><br>
+        <input type="text" name="phone" placeholder="phone"><br>
+
+        <label for="address">address</label><br>
+        <input type="text" name="address" placeholder="address"><br><br>
+        <input type="submit" value="add"><br>
+    </form>
+    
+</body>
+</html>

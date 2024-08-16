@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details div {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+        .value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    
+    {% include  'message.html' %}
+    <div class="container">
+        <h1>Details Page</h1>
+        <div lass="details">
+            <div>
+                <span class="label">Name: </span>
+                <span class="value" id="name">{{contact.name}}</span>c
+            </div>
+         
+            <div>
+                <span class="label">Age: </span>
+                <span class="value" id="age">{{contact.age}}</span>
+            </div>
+            <div>
+                <span class="label">Phone: </span>
+                <span class="value" id="phone">{{contact.phone}}</span>
+            </div>
+            <div>
+                <span class="label">Address: </span>
+                <span class="value" id="address">{{contact.address}}</span>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'contact' %}">back</a>
+</body>
+</html>
