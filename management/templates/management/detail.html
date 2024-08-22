@@ -46,7 +46,7 @@
         <div lass="details">
             <div>
                 <span class="label">Name: </span>
-                <span class="value" id="name">{{contact.name}}</span>c
+                <span class="value" id="name">{{contact.name}}</span>
             </div>
          
             <div>
@@ -61,7 +61,25 @@
                 <span class="label">Address: </span>
                 <span class="value" id="address">{{contact.address}}</span>
             </div>
+
         </div>
+        <h2>family member </h2>
+        {% for f in family %}
+        <div>
+            <span class="label">Name: </span>
+            <span class="value" id="name">{{f.name}}</span>
+        </div>
+
+        <div>
+            <span class="label">Image: </span>
+            <img src="{{f.image.url}}" height="100px" width="100px" alt="">
+        </div>
+     
+        <div>
+            <span class="label">reletionship: </span>
+            <span class="value" id="reletionship">{{f.reletionship}}</span>
+        </div>
+        {% endfor %}
     </div>
     <a href="{% url 'contact' %}">back</a>
 </body>

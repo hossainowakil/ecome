@@ -54,8 +54,11 @@ def contact(request):
 
 def detail(request,id):
     contact = Contact.objects.get(id=id)
+    family = FamilyMember.objects.filter(contact=contact)
+    
     context ={
-        'contact': contact
+        'contact': contact,
+        'family' : family
     }
     return render(request,'management/detail.html',context)
 
