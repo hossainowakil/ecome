@@ -89,6 +89,10 @@ def add_contact(request):
     return render(request, 'management/add_contact.html')
 
 
+def test(request):
+     return render(request,"test.html")
+
+
 def delete_contact(request,id):
      contact = Contact.objects.get(id=id)
      contact.delete()

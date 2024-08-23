@@ -8,3 +8,4 @@ admin.site.register(FamilyMember)
 
 admin.site.register(Catagory)
 admin.site.register(product)
+admin.site.register(Profile)
